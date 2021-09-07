@@ -17,5 +17,7 @@ setuptools.setup(
     },
     license='MIT',
     packages=['middleware_service'],
-    install_requires=['requests'],
+    install_requires=[],
+    include_package_data=True,
+    zip_safe=False
 )
