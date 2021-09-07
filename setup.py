@@ -7,11 +7,15 @@ setuptools.setup(
     name='middleware_service',
     version='0.0.1',
     author='Rahul',
+    author_email='rahul.gupta@adcuratio.com',
     description='for data authentication by middleware',
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url='https://github.com/',
+    url='https://github.com/gupta24/service',
+    project_urls = {
+        "Bug Tracker": "https://github.com/gupta24/service/issues"
+    },
     license='MIT',
     packages=['middleware_service'],
-    install_requires=[],
+    install_requires=['requests'],
 )
