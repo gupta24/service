@@ -16,7 +16,7 @@ setuptools.setup(
         "Bug Tracker": "https://github.com/gupta24/service/issues"
     },
     license='MIT',
-    packages=['middleware_service'],
+    packages=find_packages(include=['middleware_service', 'middleware_service.*']),
     install_requires=[],
     include_package_data=True,
     zip_safe=False
