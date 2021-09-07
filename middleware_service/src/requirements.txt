@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+sqlalchemy
+fastapi_utils
+requests
+psycopg2-binary
+starlette

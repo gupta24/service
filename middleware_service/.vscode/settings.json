@@ -1,0 +1,43 @@
+{
+    "python.pythonPath": "C:\\Python39\\python.exe",
+    "python.linting.pycodestyleEnabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+        "--line-length",
+        "120"
+    ],    
+    "python.linting.flake8Args": [
+        "--max-line-length=79",
+        "--ignore=E402",
+    ],
+    "python.linting.pylintArgs": [
+        "--max-line-length=79"
+    ],
+    "python.formatting.autopep8Args": [
+        "--max-line-length=79"
+    ], 
+    "launch": {
+
+        "configurations": [],
+        "compounds": []
+    },
+    "terminal.integrated.profiles.windows": {
+    
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+        "Git Bash": {
+            "source": "Git Bash"
+        }
+    }
+}
