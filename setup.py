@@ -4,7 +4,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 
-VERSION = '0.0.1'
+VERSION = '0.1.0'
 DESCRIPTION = 'for data authentication by middleware'
 LONG_DESCRIPTION = long_description
 
@@ -22,9 +22,21 @@ setup(
     project_urls = {
         "Bug Tracker": "https://github.com/gupta24/service/issues"
     },
-    license='MIT',
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
     packages=find_packages(),
-    install_requires=[],
-    include_package_data=True,
+    install_requires=[
+        'fastapi',
+        'uvicorn',
+        'sqlalchemy',
+        'fastapi_utils',
+        'requests',
+        'psycopg2-binary',
+        'starlette',
+    ],
+    python_require='>=3.7',
     zip_safe=False
 )
