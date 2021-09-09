@@ -13,7 +13,7 @@ LONG_DESCRIPTION = long_description
 setup(
     name='middleware_service',
     version=VERSION,
-    author='Rahul',
+    author='Adcuratio',
     author_email='rahul.gupta@adcuratio.com',
     description=DESCRIPTION,
     long_description=LONG_DESCRIPTION,
