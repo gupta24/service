@@ -17,4 +17,4 @@ app.include_router(new_router.router)
 
 
 def start():
-    uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=False)
+    uvicorn.run(app, host="127.0.0.1", port=8000, reload=False)
