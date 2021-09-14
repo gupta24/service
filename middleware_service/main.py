@@ -1,3 +1,4 @@
+import uvicorn
 from typing import Optional
 from fastapi import FastAPI, Depends, Request
 from .src.database import engine
@@ -12,3 +13,8 @@ models.Base.metadata.create_all(engine)
 
 app.mount("/app1", app1)
 app.include_router(new_router.router)
+
+
+
+def start():
+    uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=False)
