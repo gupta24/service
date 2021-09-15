@@ -1,4 +1,5 @@
 from .hmac_signature import hash_function
+from .secret_key_generator import get_secret_key
 from fastapi.encoders import jsonable_encoder
 import logging
 
@@ -10,9 +11,7 @@ logging.basicConfig(filename="newfile.log",
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
-
-secrat_key = b'(1O\x0b+0\xdd\xca8\x11\x9a\xcd\xe6\xd09c'
-
+secrat_key = get_secret_key()
 
 def check_signature(client_signature, data_message):
     # get the raw data and HMAC signature from client side..

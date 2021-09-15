@@ -18,5 +18,10 @@
 
 ** import and run middleware package on virtualenv in following way:
 - import middleware_service
-- middleware_service.start()
+- from middleware_service import CustomMiddleware
+
+
+** add the middleware with your fastapi app , like this
+- app.add_middleware(CustomMiddleware)
+ 
 
