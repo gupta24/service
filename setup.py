@@ -13,11 +13,12 @@ LONG_DESCRIPTION = long_description
 setup(
     name='middleware_service',
     version=VERSION,
-    author='Adcuratio',
+    author='Rahul',
     author_email='rahul.gupta@adcuratio.com',
     description=DESCRIPTION,
     long_description=LONG_DESCRIPTION,
     long_description_content_type="text/markdown",
+    license='MIT',
     url='https://github.com/gupta24/service',
     project_urls = {
         "Bug Tracker": "https://github.com/gupta24/service/issues"

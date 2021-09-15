@@ -16,6 +16,7 @@
 - $ pip3 install git+https://github.com/gupta24/service
 
 
-** run middleware package on virtualenv
-- $ uvicorn middleware_service.src.main:app --reload
+** import and run middleware package on virtualenv in following way:
+- import middleware_service
+- middleware_service.start()
 
