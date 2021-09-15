@@ -1,5 +1,5 @@
 from fastapi import FastAPI, Response, HTTPException, status
-from ...signatures.signature_validation import check_signature
+from ..signatures.signature_validation import check_signature
 from starlette.types import ASGIApp, Message, Scope, Receive, Send
 from starlette.responses import PlainTextResponse
 from starlette.requests import Request
