@@ -17,5 +17,4 @@ def hash_function(secret_key, message):
     digest = hmac.new(secret_key, message, hashlib.sha1).digest()
     base64_bytes = base64.b64encode(digest)
     base64_string = base64_bytes.decode("ascii")
-    logger.info(base64_string)
     return base64_string
