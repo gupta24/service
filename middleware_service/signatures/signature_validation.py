@@ -1,5 +1,5 @@
 from .hmac_signature import hash_function
-from .secret_key_generator import set_secret_key ,get_secret_key
+from .secret_key_generator import get_secret_key
 from fastapi.encoders import jsonable_encoder
 import logging
 
@@ -11,7 +11,7 @@ logging.basicConfig(filename="newfile.log",
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
-set_secret_key()
+
 secrat_key = get_secret_key()
 logger.info(secrat_key)
 
