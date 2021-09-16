@@ -37,7 +37,6 @@ class CustomMiddleware(BaseHTTPMiddleware):
         super().__init__(app)
 
     async def dispatch(self, request: Request, call_next: Callable[[Request], Awaitable[StreamingResponse]]):
-        logger.info('start')
         body = await request.body()
         # logger.info(body)
         client_signature = request.headers['signature']

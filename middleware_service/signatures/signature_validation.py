@@ -13,7 +13,6 @@ logger.setLevel(logging.INFO)
 
 
 secrat_key = get_secret_key()
-logger.info(secrat_key)
 
 def check_signature(client_signature, data_message):
     # get the raw data and HMAC signature from client side..
