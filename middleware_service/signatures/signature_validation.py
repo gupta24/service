@@ -16,7 +16,9 @@ secrat_key = get_secret_key()
 
 def check_signature(client_signature, data_message):
     # get the raw data and HMAC signature from client side..
+    print(data_message)
     server_hmac_signature = hash_function(secrat_key, data_message)
+    print(server_hmac_signature)
     if(server_hmac_signature == client_signature):
         return True
     else:
