@@ -15,6 +15,7 @@ def get_secret_key():
     global is_setup_key
     global default_secret_key
     global input_secret_key
+    print(is_setup_key)
     if is_setup_key:
         is_setup_key = False
         print(is_setup_key)
