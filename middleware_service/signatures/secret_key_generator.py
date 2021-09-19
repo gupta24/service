@@ -11,7 +11,9 @@ def generate_secret_key(input_byte_key):
     
 def get_secret_key():
     global is_setup_key, default_secret_key, input_secret_key
+    print(is_setup_key)
     if is_setup_key:
+        is_setup_key = False
         return input_secret_key
     return default_secret_key
 
