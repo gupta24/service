@@ -8,7 +8,6 @@ def generate_secret_key(input_byte_key):
     global is_setup_key
     input_secret_key = input_byte_key
     is_setup_key = True
-    print(is_setup_key)
 
     
 def get_secret_key():

@@ -1,6 +1,5 @@
 from .hmac_signature import hash_function
 from .secret_key_generator import get_secret_key
-from fastapi.encoders import jsonable_encoder
 import logging
 
 

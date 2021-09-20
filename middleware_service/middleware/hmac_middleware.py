@@ -1,12 +1,13 @@
 from fastapi import FastAPI, Response, HTTPException, status
-from ..signatures.signature_validation import check_signature
 from starlette.types import ASGIApp, Message, Scope, Receive, Send
-from starlette.responses import PlainTextResponse
-from starlette.requests import Request
-from starlette.responses import Response, StreamingResponse
-from typing import Callable, Awaitable
-import logging
+from starlette.responses import Response, StreamingResponse, PlainTextResponse
 from starlette.middleware.base import BaseHTTPMiddleware
+from starlette.requests import Request
+from typing import Callable, Awaitable
+
+from ..signatures.signature_validation import check_signature
+import logging
+
 
 
 
@@ -38,10 +39,9 @@ class CustomMiddleware(BaseHTTPMiddleware):
 
     async def dispatch(self, request: Request, call_next: Callable[[Request], Awaitable[StreamingResponse]]):
         body = await request.body()
-        # logger.info(body)
         client_signature = request.headers['signature']
         valid_signature = check_signature(client_signature, body)
-        # logger.info(client_signature)
+
         if valid_signature:
             request = RequestBody(request.scope, body)
             response = await call_next(request)
