@@ -14,6 +14,7 @@ def get_secret_key():
     global default_secret_key
 
     try:
+        print(find_dotenv())
         secret_key = os.environ['SECRET_KEY']
         secret_key = secret_key.encode('ascii')
     except BaseException as e:
