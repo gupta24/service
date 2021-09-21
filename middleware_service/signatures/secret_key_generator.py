@@ -14,8 +14,8 @@ def get_secret_key():
     global default_secret_key
 
     try:
-        secret_key = os.environ.get('SECRET_KEY')
-    except KeyError:
+        secret_key = os.environ['SECRET_KEY']
+    except RuntimeError:
         raise KeyException(f"SECRET_KEY does not exist in .env file, setup variable name in your .env")
 
     print(secret_key)
