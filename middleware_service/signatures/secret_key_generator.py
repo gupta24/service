@@ -15,7 +15,7 @@ def get_secret_key():
 
     try:
         secret_key = os.environ['SECRET_KEY']
-    except KeyError as e:
+    except BaseException as e:
         raise KeyException(f"{e} does not exist in .env file, setup variable name in your .env")
 
     print(secret_key)
