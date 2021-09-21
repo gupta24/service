@@ -37,6 +37,7 @@ setup(
         'requests',
         'psycopg2-binary',
         'starlette',
+        'python-dotenv',
     ],
     python_require='>=3.7',
     zip_safe=False

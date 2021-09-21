@@ -5,6 +5,7 @@ default_secret_key = b'(1O\x0b+0\xdd\xca8\x11\x9a\xcd\xe6\xd09c'
 input_secret_key = ''
 is_setup_key = False
 
+load_dotenv()
 secret_key = os.getenv('SECRET_KEY')
 
 def generate_secret_key(input_byte_key):
@@ -21,5 +22,6 @@ def get_secret_key():
     if is_setup_key:
         is_setup_key = False
         return input_secret_key
-    return secret_key
+    print(secret_key)
+    return default_secret_key
 
