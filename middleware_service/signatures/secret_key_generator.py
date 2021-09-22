@@ -2,7 +2,7 @@ import os
 import sys
 from dotenv import load_dotenv, find_dotenv
 
-path = sys.path[1]
+path = find_dotenv('.env',False, False)
 load_dotenv(path)
 
 #def KeyError(BaseException):
