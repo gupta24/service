@@ -43,8 +43,9 @@ def find_env():
 filepath = find_env()
 load_dotenv(filepath)
 
-#def KeyError(BaseException):
-#    pass
+
+def KeyError(BaseException):
+    pass
 
 
 def get_secret_key():
