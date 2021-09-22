@@ -2,7 +2,14 @@ import os
 import sys
 from dotenv import load_dotenv, find_dotenv
 
-path = find_dotenv('.env',False, False)
+#path = find_dotenv('.env',False, False)
+filename = '.env'
+frame = sys._getframe()
+# find first frame that is outside of this file
+while frame.f_code.co_filename == __file__:
+    frame = frame.f_back
+frame_filename = frame.f_code.co_filename
+path = os.path.dirname(os.path.abspath(frame_filename))
 load_dotenv(path)
 
 #def KeyError(BaseException):
