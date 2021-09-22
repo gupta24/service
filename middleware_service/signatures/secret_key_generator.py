@@ -51,7 +51,7 @@ def KeyError(BaseException):
 def get_secret_key():
     try:
         print(filepath)
-        secret_key = os.getenv('SECRET_KEY')
+        secret_key = os.getenv['SECRET_KEY']
         print(secret_key)
         secret_key = secret_key.encode('ascii')
     except BaseException as e:
