@@ -1,7 +1,8 @@
 import os
+import sys
 from dotenv import load_dotenv, find_dotenv
 
-path = find_dotenv()
+path = sys.path[1]
 load_dotenv(path)
 
 #def KeyError(BaseException):
