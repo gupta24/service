@@ -9,8 +9,9 @@ frame = sys._getframe()
 while frame.f_code.co_filename == __file__:
     frame = frame.f_back
 frame_filename = frame.f_code.co_filename
-curr_dir = os.path.dirname(os.path.abspath(frame_filename))
-load_dotenv(path = os.path.join(curr_dir, filename))
+dirname = os.path.dirname(os.path.abspath(frame_filename))
+filepath = os.path.join(dirname, filename)
+load_dotenv(filepath)
 
 #def KeyError(BaseException):
 #    pass
@@ -18,7 +19,7 @@ load_dotenv(path = os.path.join(curr_dir, filename))
 
 def get_secret_key():
 #    try:
-    print(path)
+    print(filepath)
     secret_key = os.getenv('SECRET_KEY')
     print(secret_key)
     #secret_key = secret_key.encode('ascii')
