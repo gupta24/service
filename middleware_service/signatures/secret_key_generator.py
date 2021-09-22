@@ -30,7 +30,7 @@ def find_env():
     while frame.f_code.co_filename == __file__:
         frame = frame.f_back
     frame_filename = frame.f_code.co_filename
-    dirname = os.path.dirname(os.path.abspath(frame_filename))
+    path = os.path.dirname(os.path.abspath(frame_filename))
 
     for dirname in _walk_to_root(path):
         check_path = os.path.join(dirname, filename)
