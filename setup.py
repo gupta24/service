@@ -38,6 +38,7 @@ setup(
         'psycopg2-binary',
         'starlette',
         'python-dotenv',
+        'click'
     ],
     python_require='>=3.7',
     zip_safe=False

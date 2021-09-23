@@ -43,20 +43,12 @@ def find_env():
 filepath = find_env()
 load_dotenv(filepath)
 
-"""
+
 def KeyError(BaseException):
     pass
-"""
+
 
 def get_secret_key():
-    secret_key = os.getenv('SECRET_KEY')
-
-    if not secret_key:
-        secret_key = secret_key.encode('ascii')
-    else:
-        raise KeyError("SECRET_KEY does not exist in .env file, setup variable name in your .env")
-
-    """
     try:
         print(filepath)
         secret_key = os.environ['SECRET_KEY']
@@ -64,7 +56,7 @@ def get_secret_key():
         secret_key = secret_key.encode('ascii')
     except BaseException as e:
         raise KeyError("SECRET_KEY does not exist in .env file, setup variable name in your .env")
-    """
+    
     print(secret_key)
     return secret_key
 
